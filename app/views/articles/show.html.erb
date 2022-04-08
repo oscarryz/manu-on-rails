@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+  <title><%= @article.title %></title>
+</head>
+
+<body>
+<div class="grid-container">
+  <header class="header">
+  </header>
+  <main class="main" data-id="<%=@article.original_id %>">
+    <div id="context-text" class="content">
+      <%= @article.body.html_safe %>
+    </div>
+  </main>
+  <footer class="footer">
+    <nav id="footer-nav">
+      <a href="https://oscarryz.com/about-me.html">About me</a>
+      <a href="/feed.json">JSON feed</a>
+      <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
